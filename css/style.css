@@ -16,7 +16,7 @@ html {
     box-sizing: inherit;
 }
 
-/* GLOBALES */
+/** GLOBALES **/
 body {
     background-color: var(--primario);
     font-size: 1.6rem;
@@ -47,7 +47,7 @@ h1 { font-size: 4rem;}
 h2 { font-size: 3.2rem;}
 h3 { font-size: 2.4rem;}
 
-/* HEADER */
+/** HEADER **/
 .header {
     display: flex;
     justify-content: center;
@@ -56,6 +56,19 @@ h3 { font-size: 2.4rem;}
     margin: 3rem 0;
 }
 
+/** FOOTER **/
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto {
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/** NAVEGACION **/
 .navegacion {
     background-color: var(--primarioOscuro);
     padding: 1rem 0;
