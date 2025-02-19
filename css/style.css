@@ -11,10 +11,12 @@
 
 html {
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 
 /** GLOBALES **/
 body {
@@ -56,6 +58,7 @@ h3 { font-size: 2.4rem;}
     margin: 3rem 0;
 }
 
+
 /** FOOTER **/
 .footer {
     background-color: var(--primarioOscuro);
@@ -68,6 +71,7 @@ h3 { font-size: 2.4rem;}
     font-size: 2.2rem;
 }
 
+
 /** NAVEGACION **/
 .navegacion {
     background-color: var(--primarioOscuro);
@@ -79,8 +83,78 @@ h3 { font-size: 2.4rem;}
 .navegacion__enlace {
     font-family: var(--fuentePrincipal);
     color: var(--blanco);
+    font-size: 3rem;
 }
 .navegacion__enlace:hover,
 .navegacion__enlace--activo {
     color: var(--secundario);
+}
+
+
+/** GRID **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+}
+@media (min-width: 780px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/** PRODUCTOS || MAIN **/
+
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+.producto__imagen {
+    width: 100%;
+}
+.producto__nombre {
+    font-size: 4rem;
+}
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+/** GRAFICOS **/
+.grafico {
+    background-size: cover;
+}
+@media (min-width: 780px) {
+    .grafico--camisas {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        background-image: url(../img/grafico1.jpg);
+    }
+    .grafico--node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+        background-image: url(../img/grafico2.jpg);
+    }
+}
+
+.grafico--camisas {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+.grafico--node {
+    grid-row: 5 / 6;
+    grid-column: 1 / 3;
+    background-image: url(../img/grafico2.jpg);
 }
